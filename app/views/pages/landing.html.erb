@@ -1,0 +1,19 @@
+<h2 class="text-center">Name and e-mail</h2>
+
+<table class="table table-hover ">
+  <thead class="thead-dark ">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+
+<tbody>
+    <% @student.each do |student| %>
+        <tr>
+           <td ><%= student.name %></td>
+           <td><%= student.email %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

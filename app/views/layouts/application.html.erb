@@ -2,16 +2,44 @@
 <html>
   <head>
     <title>SecondApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-mtS696VnV9qeIoC8w/PrPoRzJ5gwydRVn0oQ9b+RJOPxE1Z1jXuuJcyeNxvNZhdx" crossorigin="anonymous">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
-  </head>
+      </head>
 
   <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+     <a class="navbar-brand">
+    <%= image_tag "pumpkin.svg", width:"35", height:"35" ,class:"d-inline-block align-left" %>
+    Pumpkin
+    </a>
+  <div class="collapse navbar-collapse nav justify-content-end" id="navbarColor02">
+  
+    <ul class="navbar-bar nav justify-content-end">
+      <li class="nav-item active">
+      <span class="badge badge-info">
+        <a class="nav-link text-success" href="/students">Index</a>
+        </span>
+      </li>
+      <li class="nav-item">
+      <span class="badge badge-info">
+        <a class="nav-link text-success" href="/pages/landing">Landing</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
     <%= yield %>
+</div>
   </body>
 </html>
